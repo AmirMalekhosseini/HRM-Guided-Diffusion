@@ -21,14 +21,15 @@ This project demonstrates how to train an AI to navigate a continuous 2D maze wi
 
 ##  Results & Ablation Study
 
-By turning the guidance parameters on and off, the ablation study proves the effectiveness of the STITCH-OPE algorithm. The model successfully learns to outperform the dataset it was trained on.
+By turning the guidance parameters on and off, the ablation study proves the effectiveness of the STITCH-OPE algorithm. The model successfully learns to outperform the dataset it was trained on and approaches the performance of the expert target policy.
 
-| Method | Return | Success Rate |
+| Method | Return (Mean ± Std) | Success Rate |
 | :--- | :--- | :--- |
-| **Ground Truth (Expert)** | High | 100% |
-| **No Guidance ($\alpha=0, \lambda=0$)** | Low | ~30-40% |
-| **Target Only ($\alpha=1, \lambda=0$)** | Medium | ~70-80% |
-| **STITCH-OPE ($\alpha=1, \lambda=0.3$)**| **High** | **~90-100%** |
+| **Ground Truth (Expert Target Policy)** | 3.45 ± 4.01 | 100% |
+| **No Guidance (α=0, λ=0)** | 2.77 ± 6.58 | 73% |
+| **Target Only (α=1, λ=0)** | 4.42 ± 5.73 | 100% |
+| **STITCH-OPE (α=1, λ=0.3)** | 3.33 ± 5.32 | 100% |
+| **Higher λ (α=1, λ=0.5)** | 6.94 ± 10.66 | 100% |
 
 ![Side by side comparison of STITCH-OPE guidance](result.png)
 ##  Dependencies
