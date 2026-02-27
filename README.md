@@ -30,8 +30,7 @@ By turning the guidance parameters on and off, the ablation study proves the eff
 | **Target Only ($\alpha=1, \lambda=0$)** | Medium | ~70-80% |
 | **STITCH-OPE ($\alpha=1, \lambda=0.3$)**| **High** | **~90-100%** |
 
-*(Note: Add your Matplotlib side-by-side comparison plot here by saving it as `results.png` and using `![Results](results.png)`)*
-
+![Side by side comparison of STITCH-OPE guidance](result.png)
 ##  Dependencies
 
 This project is built using Python and relies on the following core libraries:
